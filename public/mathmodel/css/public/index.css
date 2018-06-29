@@ -1,0 +1,196 @@
+body {
+  background-color: ghostwhite;
+  width: 100%;
+  height: 100%;
+}
+.box {
+  position: relative;
+  width: 900px;
+  height: auto;
+  margin: 50px auto;
+  background-color: white;
+  border: 1px solid gainsboro;
+}
+.box .header_box {
+  width: 100%;
+  margin: 20px 0 0;
+  border-bottom: 1px solid darkgray;
+  padding-bottom: 5px;
+}
+.box .header_box .header_title {
+  margin: 10px auto;
+  width: 600px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+.box .header_box .team_info {
+  margin: 0 auto 10px;
+  width: 700px;
+  text-align: center;
+  font-size: 16px;
+}
+.box .header_box .team_info .login {
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  top: 36px;
+  right: 20px;
+}
+.box .header_box .team_info .login .logged {
+  display: none;
+}
+.box .header_box .team_info .login .logged .exit_login:hover {
+  cursor: pointer;
+}
+.box .header_box .team_info .login .nologined:hover {
+  cursor: pointer;
+}
+.box .container {
+  overflow: hidden;
+}
+.box .container .nav {
+  overflow: hidden;
+  background-color: #d6f3fb;
+}
+.box .container .nav .nav_box li {
+  height: 45px;
+  line-height: 45px;
+  width: 225px;
+  float: left;
+  text-align: center;
+}
+.box .container .nav .nav_box li a {
+  display: block;
+  width: 225px;
+  height: 45px;
+}
+.box .container .nav .nav_box li:hover {
+  background-color: #3ec5ec;
+}
+.box .container .nav .nav_box .changecolor {
+  background-color: #3ec5ec;
+}
+.box .msgBox {
+  display: none;
+}
+.box .msgBox .mask {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+  opacity: 0.5;
+}
+.box .msgBox .msg_b {
+  box-shadow: 1px 1px 1px 1px rgba(145, 145, 150, 0.3);
+  position: fixed;
+  top: 15%;
+  left: 35%;
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  opacity: 1.2;
+}
+.box .msgBox .msg_b .noexit {
+  display: none;
+  font-size: 18px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  margin-top: 90px;
+}
+.box .msgBox .msg_b .noexit div {
+  display: inline-block;
+}
+.box .msgBox .msg_b .hasSign {
+  display: none;
+  font-size: 18px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  margin-top: 90px;
+}
+.box .msgBox .msg_b .hasSign div {
+  display: inline-block;
+}
+.box .msgBox .msg_header {
+  height: 35px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #414141;
+  background-color: gainsboro;
+}
+.box .msgBox .msg_header span {
+  line-height: 34px;
+  margin: 10px;
+}
+.box .msgBox .msg_header .cancel {
+  margin: 4px 6px;
+  float: right;
+}
+.box .msgBox .msg_header .cancel i {
+  font-size: 25px;
+}
+.box .msgBox .msg_header .cancel i:hover {
+  color: #d22c0b;
+}
+.box .signOutMsg {
+  display: none;
+}
+.box .signOutMsg .mask {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+  opacity: 0.5;
+}
+.box .signOutMsg .msg_b {
+  box-shadow: 1px 1px 1px 1px rgba(145, 145, 150, 0.3);
+  position: fixed;
+  top: 15%;
+  left: 35%;
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  opacity: 1.2;
+}
+.box .signOutMsg .msg_b .msg_text {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+}
+.box .signOutMsg .msg_b .msg_btn {
+  text-align: center;
+  margin-top: 20px;
+}
+.box .signOutMsg .msg_b .msg_btn .yes {
+  display: inline-block;
+}
+.box .signOutMsg .msg_b .msg_btn .no {
+  margin-left: 30px;
+  display: inline-block;
+}
+.box .signOutMsg .msg_header {
+  height: 35px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #414141;
+  background-color: gainsboro;
+}
+.box .signOutMsg .msg_header span {
+  line-height: 34px;
+  margin: 10px;
+}
+.box .signOutMsg .msg_header .cancel {
+  margin: 4px 6px;
+  float: right;
+}
+.box .signOutMsg .msg_header .cancel i {
+  font-size: 25px;
+}
+.box .signOutMsg .msg_header .cancel i:hover {
+  color: #d22c0b;
+}

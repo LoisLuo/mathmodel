@@ -1,0 +1,129 @@
+.contain {
+  width: 700px;
+  margin: 50px auto;
+}
+.contain .personal_sign .subname {
+  float: left;
+  line-height: 35px;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+.contain .personal_sign li {
+  width: 700px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.contain .personal_sign li input {
+  padding: 2px 8px;
+  width: 300px;
+  height: 30px;
+}
+.contain .personal_sign .department select {
+  width: 320px;
+  height: 40px;
+}
+.contain .personal_sign .department .dep_input {
+  float: left;
+}
+.contain .personal_sign .department .result {
+  float: left;
+  margin: 10px 0 0 10px;
+}
+.contain .personal_sign .remark textarea {
+  outline: none;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.contain .personal_sign .remark .remark_input {
+  float: left;
+}
+.contain .personal_sign .remark .remark_msg {
+  float: left;
+  color: gray;
+  margin-left: 10px;
+  margin-top: 24px;
+}
+.contain .personal_sign .verf_code .verf_code_box {
+  float: left;
+  display: inline-block;
+}
+.contain .personal_sign .verf_code .verf_code_box .input input {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin-right: 17px;
+}
+.contain .input {
+  float: left;
+  font-size: 18px;
+}
+.contain .input input {
+  border: 1px solid #777;
+  padding: 2px 8px;
+  font-size: 16px;
+  width: 400px;
+  height: 35px;
+}
+.contain .input input:focus {
+  outline: none;
+  border: 2px solid gray;
+}
+.contain .input .icon {
+  position: absolute;
+  top: 7px;
+  left: 380px;
+}
+.contain .input .icon i {
+  color: gray;
+  font-size: 26px;
+}
+.contain .msg {
+  float: left;
+  width: 180px;
+  height: 25px;
+  margin-left: 20px;
+  padding-top: 8px;
+  color: gray;
+  font-size: 15px;
+}
+.contain .msg .prompt {
+  display: none;
+}
+.contain .msg .empty {
+  display: none;
+  color: #ff7200;
+}
+.contain .msg .error {
+  display: none;
+  color: #ff7200;
+}
+.contain .msg .correct {
+  display: none;
+}
+.contain .msg .correct i {
+  font-size: 20px;
+  color: #38d509;
+}
+.contain .msg_err {
+  font-size: 18px;
+  margin-left: 110px;
+  margin-top: 20px;
+  color: red;
+  visibility: hidden;
+}
+.contain .submit_btn {
+  background-color: #c9cdce;
+  text-align: center;
+  width: 316px;
+  height: 45px;
+  font-size: 18px;
+  line-height: 45px;
+  margin: 10px 0px 20px 110px;
+  font-weight: 600;
+  color: #4e5152;
+}
+.contain .submit_btn:hover {
+  background-color: #bfc1c1;
+}

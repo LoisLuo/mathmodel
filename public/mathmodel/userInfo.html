@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/userInfo/userInfo.css"/>
+		<title>用户</title>
+		<script src="js/public/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="contain">
+			<div class="base_info">
+				<div class="title">
+					<div class="bar"></div>
+					<div class="title_b">基本信息</div>
+				</div>
+				<div class="content">
+					<div class="school_num">
+						<span>
+							学号:
+						</span>
+						<div class="sn_c"></div>
+					</div>
+					<div class="sign">
+						<div class="sign_title">比赛:</div>
+						<div class="sign_b">
+							暂无
+						</div>
+						<div class="hasSign">已参赛</div>
+						<div class="sign_out">
+							<input type="button" name="" id="" value="取消参赛" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<script src="js/userInfo/userinfo.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".sn_c").text(sessionStorage.getItem("username"))
+			userInfo.signOut();
+			userInfo.getList();
+		</script>
+	</body>
+</html>

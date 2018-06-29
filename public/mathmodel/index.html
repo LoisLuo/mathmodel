@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/public/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public/index.css" />
+		<title>数学建模</title>
+
+		<script src="js/font_580773_nsqnz3ke39uanhfr/iconfont.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="js/font_580773_nsqnz3ke39uanhfr/iconfont.css" />
+
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="header_box">
+				<div class="header_title">数学建模报名管理系统</div>
+				<div class="team_info">
+					<div class="team_player">队员：罗春艳、孙婉莹、刘文青、耿钰婷、余芷璇</div>
+					<div class="login">
+						<div class="logged">
+							<div class="username"></div>
+							<div class="exit_login">退出登录</div>
+						</div>
+						<div class="nologined">
+							登录
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="nav">
+					<ul class="nav_box">
+						<li class="user_info nav_item">
+							<a href="#/">个人信息</a>
+						</li>
+						<li class="personnal_sign nav_item">
+							<a href="#/personalsign">个人报名</a>
+						</li>
+						<li class="team_sign nav_item">
+							<a href="#/teamsign">小组报名</a>
+						</li>
+						<li class="sign_result nav_item">
+							<a href="#/signlist">报名结果</a>
+						</li>
+					</ul>
+				</div>
+				<div class="contian_box">
+
+				</div>
+			</div>
+			<div class="loginBox">
+
+			</div>
+			<div class="msgBox">
+				<div class="mask"></div>
+				<div class="msg_b">
+					<div class="msg_header">
+						<span>提示</span>
+						<div class="cancel">
+							<i class="iconfont icon-quxiao"></i>
+						</div>
+					</div>
+					<div class="noexit">
+						<div class="text"></div>
+						<div> 不存在</div>
+					</div>
+					<div class="hasSign">
+						<div class="text"></div>
+						<div> 不可重复报名</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="signOutMsg">
+				<div class="mask"></div>
+				<div class="msg_b">
+					<div class="msg_header">
+						<span>提示</span>
+						<div class="cancel">
+							<i class="iconfont icon-quxiao"></i>
+						</div>
+					</div>
+					<div class="msg_text">
+						<div class="text">是否取消参赛?</div>
+					</div>
+					<div class="msg_btn">
+						<div class="yes"><input type="button" value="确定"/></div>
+						<div class="no">
+							<input type="button" name="" id="" value="取消" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/public/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/team/teamSign.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public/router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public/login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/userInfo/userinfo.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			console.log(sessionStorage.getItem("token"));
+
+			login.logOrnot();
+			index.clickItem();
+			
+			if(sessionStorage.token==null){
+				$(".loginBox").show();
+				$(".loginBox").load("login.html")
+			}
+			
+			$(".nologined").on("click", function() {
+				$(".loginBox").show();
+				$(".loginBox").load("login.html")
+			})
+			
+			//取消信息
+			$(document).on("click", ".msgBox .cancel", function() {
+				$(".msgBox").hide();
+			})
+			
+			//点击登录
+			$(document).on("click", ".login_btn", function() {
+				login.doLogin();
+			})
+			//退出登录
+			$(".exit_login").on("click", function() {
+				login.logout();
+			})
+			//点击取消登录
+			$(document).on("click", ".cancel", function() {
+				$(".loginBox").hide();
+			})
+			
+			
+			/***点击导航栏切换***/
+			Router.route('/', function() {
+				//				$(".loading").show();
+				$(".user_info").addClass("changecolor").siblings().removeClass("changecolor")
+				$(".contian_box").load("userInfo.html");
+			})
+			Router.route('/personalsign', function() {
+				//				$(".loading").show();
+				$(".personnal_sign").addClass("changecolor").siblings().removeClass("changecolor")
+				if(sessionStorage.getItem("sign")==1){
+					$(".contian_box").load("hasSign.html");
+				}else if(sessionStorage.getItem("token")==null){
+					$(".loginBox").show();
+					$(".loginBox").load("login.html")
+				}else{
+					$(".contian_box").load("personalSign.html");
+				}
+				
+
+			})
+			Router.route('/teamsign', function() {
+				//				$(".loading").show();
+				$(".team_sign").addClass("changecolor").siblings().removeClass("changecolor")
+				if(sessionStorage.getItem("sign")==1){
+					$(".contian_box").load("hasSign.html");
+				}else if(sessionStorage.getItem("token")==null){
+					$(".loginBox").show();
+					$(".loginBox").load("login.html")
+				}else{
+					$(".contian_box").load("teamSign.html");
+				}
+				
+			})
+			Router.route('/signlist', function() {
+				//				$(".loading").show();
+				$(".sign_result").addClass("changecolor").siblings().removeClass("changecolor")
+				$(".contian_box").load("signList.html");
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,144 @@
+.contain {
+    width: 700px;
+    margin: 50px auto;
+    .personal_sign {
+        .subname {
+            float: left;
+            line-height: 35px;
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        li {
+            width: 700px;
+            margin: 10px 0;
+            overflow: hidden;
+            input {
+                padding: 2px 8px;
+                width: 300px;
+                height: 30px;
+            }
+        }
+        .school_num {}
+        .department {
+            select {
+                width: 320px;
+                height: 40px;
+            }
+            .dep_input{
+                float: left;
+            }
+            .result{
+                float: left;
+                margin: 10px 0 0 10px;
+            }
+        }
+        .remark {
+            textarea {
+                outline: none;
+                resize: none;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+            .remark_input{
+                float: left;
+            }
+            .remark_msg{
+                float: left;
+                color: gray;
+                margin-left: 10px;
+                margin-top: 24px;
+            }
+        }
+        .verf_code {
+            .subname {}
+            .verf_code_box {
+                float: left;
+                display: inline-block;
+                .input {
+                    input {
+                        float: left;
+                        width: 120px;
+                        height: 31px;
+                        margin-right: 17px;
+                    }
+                }
+            }
+        }
+    }
+    //验证
+    .input {
+        float: left;
+        font-size: 18px;
+        input {
+            //                  border: 1px solid #ff7200;
+            border: 1px solid #777;
+            padding: 2px 8px;
+            font-size: 16px;
+            width: 400px;
+            height: 35px;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid gray;
+        }
+        .icon {
+            position: absolute;
+            top: 7px;
+            left: 380px;
+            i {
+                color: gray;
+                font-size: 26px;
+            }
+        }
+    }
+    .msg {
+        float: left;
+        width: 180px;
+        height: 25px;
+        margin-left: 20px;
+        padding-top: 8px;
+        color: gray;
+        font-size: 15px;
+        .prompt {
+            display: none;
+        }
+        .empty {
+            display: none;
+            color: #ff7200;
+        }
+        .error {
+            display: none;
+            color: #ff7200;
+        }
+        .correct {
+            display: none;
+            i {
+                font-size: 20px;
+                color: #38d509;
+            }
+        }
+    }
+    .msg_err{
+        font-size: 18px;
+        margin-left: 110px;
+        margin-top: 20px;
+        color: red;
+        visibility: hidden;
+    }
+    .submit_btn {
+        background-color: #c9cdce;
+        text-align: center;
+        width: 316px;
+        height: 45px;
+        font-size: 18px;
+        line-height: 45px;
+        margin: 10px 0px 20px 110px;
+        font-weight: 600;
+        color: #4e5152;
+    }
+    .submit_btn:hover{
+         background-color: #bfc1c1;
+    }
+    
+}

@@ -1,0 +1,194 @@
+body{
+    background-color: ghostwhite;
+    width: 100%;height: 100%;
+}
+.box{
+    position: relative;
+    width: 900px;
+    height: auto;
+    margin: 50px auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    .header_box {
+        width: 100%;
+        margin: 20px 0 0;
+        border-bottom: 1px solid darkgray;
+        padding-bottom: 5px;
+        
+        .header_title {
+            margin: 10px auto;
+            width: 600px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        .team_info {
+            margin: 0 auto 10px;
+            width: 700px;
+            text-align: center;
+            font-size: 16px;
+            .login{
+                width: 100px;height: 10px;
+                position: absolute;
+                top: 36px;
+                right: 20px;
+                .logged{
+//                  float: right;
+                    display: none;
+                    .exit_login:hover{
+                        cursor: pointer;
+                    }
+                }
+                .nologined:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+    .container{
+        overflow: hidden;
+        .nav{
+            overflow: hidden;
+            background-color: #d6f3fb;
+            .nav_box{
+                li{
+                    height: 45px;
+                    line-height: 45px;
+                    width: 225px;
+                    float: left;
+                    text-align: center;
+                    a{
+                        display: block;
+                        width: 225px;
+                        height: 45px;
+                    }
+                    
+                }
+                li:hover{
+                    background-color:#3ec5ec;
+                    
+                }
+                .changecolor{
+                    background-color:#3ec5ec;
+                }
+            }
+        }
+    }
+    .msgBox{
+         display: none;
+        .mask{
+            position: absolute;
+            top: 0px;
+            width: 100%;height: 100%;
+            background-color: gainsboro;
+            opacity:0.5;
+        }
+        .msg_b{
+            box-shadow: 1px 1px 1px 1px rgba(145,145,150,0.3);
+            position: fixed;
+            top: 15%;left: 35%;
+            width: 400px;height: 250px;
+            background-color: white;
+            opacity:1.2;
+            .noexit{
+                display: none;
+                font-size: 18px;
+                width: 100%;height: 50%;
+                text-align: center;
+                margin-top: 90px;
+                div{
+                    display: inline-block;
+                }
+            }
+            .hasSign{
+                display: none;
+                font-size: 18px;
+                width: 100%;height: 50%;
+                text-align: center;
+                margin-top: 90px;
+                div{
+                    display: inline-block;
+                }
+            }
+        }
+        .msg_header{
+                height: 35px;
+                font-size: 17px;
+                font-weight: 600;
+                color: #414141;
+                background-color: gainsboro;
+                span{
+                    line-height: 34px;
+                    margin: 10px;
+                }
+                .cancel{
+                    margin: 4px 6px;
+                    float: right;
+                    i{
+                        font-size: 25px;
+                    }
+                    i:hover{
+                        color: #d22c0b;
+                    }
+                }
+            }
+    }
+    .signOutMsg{
+        display: none;
+        .mask{
+            position: absolute;
+            top: 0px;
+            width: 100%;height: 100%;
+            background-color: gainsboro;
+            opacity:0.5;
+        }
+        .msg_b{
+            box-shadow: 1px 1px 1px 1px rgba(145,145,150,0.3);
+            position: fixed;
+            top: 15%;left: 35%;
+            width: 400px;height: 250px;
+            background-color: white;
+            opacity:1.2;
+            .msg_text{
+                font-size: 18px;
+                width: 100%;
+                text-align: center;
+                margin-top: 60px;
+            }
+            .msg_btn{
+                text-align: center;
+                margin-top: 20px;
+                .yes{
+                    display: inline-block;
+                }
+                .no{
+                    margin-left: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+        .msg_header{
+                height: 35px;
+                font-size: 17px;
+                font-weight: 600;
+                color: #414141;
+                background-color: gainsboro;
+                span{
+                    line-height: 34px;
+                    margin: 10px;
+                }
+                .cancel{
+                    margin: 4px 6px;
+                    float: right;
+                    i{
+                        font-size: 25px;
+                    }
+                    i:hover{
+                        color: #d22c0b;
+                    }
+                }
+            }
+    }
+}
+

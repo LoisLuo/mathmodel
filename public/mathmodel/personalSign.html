@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人</title>
+		<link rel="stylesheet" type="text/css" href="css/public/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/personalSign/personalSign.css" />
+
+		<script src="js/public/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/font_580773_nsqnz3ke39uanhfr/iconfont.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="js/font_580773_nsqnz3ke39uanhfr/iconfont.css" />
+
+	</head>
+
+	<body>
+		<div class="contain">
+			<form action="" method="post" id="person_form">
+				<ul class="personal_sign">
+					<li class="school_num">
+						<div class="input">
+							<div class="subname">学号:</div>
+							<input type="text" name="school_num" value="" />
+						</div>
+					</li>
+					<li class="username">
+						<div class="input">
+							<div class="subname">姓名:</div>
+							<input type="text" name="username" value="" />
+						</div>
+						<div class="msg">
+							<span class="prompt">请输入姓名</span>
+							<span class="error">请输入正确的姓名</span>
+							<span class="empty">姓名不能为空</span>
+							<span class="correct"><i class="iconfont icon-zhengque"></i></span>
+						</div>
+					</li>
+					<li class="email">
+						<div class="input">
+							<div class="subname">邮箱:</div>
+							<input type="text" name="email" value="" />
+						</div>
+						<div class="msg">
+							<span class="prompt">请输入邮箱</span>
+							<span class="error">请输入正确的邮箱</span>
+							<span class="empty">邮箱不能为空</span>
+							<span class="correct"><i class="iconfont icon-zhengque"></i></span>
+						</div>
+					</li>
+					<li class="phone_num">
+						<div class="input">
+							<div class="subname">手机号码:</div>
+							<input type="text" name="phone_num" value="" />
+						</div>
+						<div class="msg">
+							<span class="prompt">请输入手机号</span>
+							<span class="error">请输入正确的手机号</span>
+							<span class="empty">手机号不能为空</span>
+							<span class="correct"><i class="iconfont icon-zhengque"></i></span>
+						</div>
+					</li>
+					<li class="department">
+						<div class="dep_input">
+							<div class="subname">所在院系:</div>
+							<select class="dep">
+								<option value="1">计算机学院计算机</option>
+								<option value="2">应科院电科</option>
+								<option value="3">应科院信科</option>
+								<option value="3">应科院统计</option>
+								<option value="3">应科院光信</option>
+								<option value="4">通信工程</option>
+								<option value="5">材料院无机</option>
+								<option value="6">测控院测控</option>
+								<option value="7">测控院通信</option>
+							</select>
+						</div>
+
+						<div class="result">
+
+						</div>
+					</li>
+					<li class="remark">
+						<div class="remark_input">
+							<div class="subname">备注:</div>
+							<textarea id="remark_text" maxlength="100" name="comment" rows="3" cols="37" placeholder="发表评论">
+									
+							</textarea>
+						</div>
+
+						<div class="remark_msg">
+							不超过100字
+						</div>
+					</li>
+					<li class="verf_code">
+						<div class="input">
+							<div class="subname">
+								验证码：
+							</div>
+							<div class="verf_code_box">
+								<div class="input">
+									<input onfocus="textFocus(this)" onblur="textBlur(this)" value="请输入验证码" type="text" class="topAlign" id="verify" required>
+									<canvas width="160" height="38" id="verifyCanvas"></canvas>
+									<img id="code_img">
+								</div>
+							</div>
+						</div>
+						<div class="msg">
+							<span class="empty">验证码不能为空</span>
+							<span class="error">验证码输入错误</span>
+							<span class="correct"><i class="iconfont icon-zhengque"></i></span>
+						</div>
+					</li>
+				</ul>
+				<div class="msg_err">请完成需要填写的项</div>
+				<div class="submit_btn">
+					确 认 报 名
+				</div>
+
+			</form>
+
+		</div>
+
+		<script src="js/public/verification_code.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/personal/personal_verf.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/personal/personalSign.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			verfPerSign();
+			$(".school_num input").val(sessionStorage.getItem("username")).attr("readonly", "readonly");
+			//提交
+			$(".submit_btn").on("click",function(){
+				var username=$(".username .msg .correct").css('display');
+				var email=$(".email .msg .correct").css('display');
+				var phone_num=$(".phone_num .msg .correct").css('display');
+				var department=$(".department .dep").val();
+				var verf_code=$(".verf_code .msg .correct").css('display');
+			
+				if(username=="none"||email=="none"||phone_num=="none"||department=="null"||verf_code=="none"){
+					$(".msg_err").css({"visibility":"visible"})
+				}else{
+					personalSign.doSign();
+				}
+//				
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "database_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "md5": "^2.2.1",
+    "multiparty": "^4.1.4",
+    "mysql": "^2.15.0",
+    "next": "^6.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "silly-datetime": "^0.1.2",
+    "uuid": "^3.2.1"
+  }
+}

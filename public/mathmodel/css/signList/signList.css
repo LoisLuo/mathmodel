@@ -1,0 +1,42 @@
+table {
+  width: 200px;
+  min-height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-color: #b6ff00;
+  border-collapse: collapse;
+}
+.contain {
+  width: 860px;
+  overflow: hidden;
+  height: auto;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.contain .header .ser_num {
+  width: 50px;
+}
+.contain .header .teamname {
+  width: 70px;
+}
+.contain .header .name {
+  width: 95px;
+}
+.contain .header .email {
+  width: 210px;
+}
+.contain .header .department {
+  width: 230px;
+}
+.contain .header .remark {
+  width: 135px;
+}
+.contain .header .operate {
+  width: 60px;
+}
+.contain .content .part {
+  border-bottom: 1px solid greenyellow;
+}
+.contain .content .div_h {
+  height: 26px;
+}

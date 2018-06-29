@@ -1,0 +1,53 @@
+.contain .base_info {
+  width: 720px;
+  height: 500px;
+  margin: 30px auto;
+}
+.contain .base_info .title {
+  width: 720px;
+  height: 10px;
+}
+.contain .base_info .title .bar {
+  width: 720px;
+  height: 12px;
+  border-bottom: 2px solid blue;
+  float: right;
+}
+.contain .base_info .title .title_b {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  background-color: white;
+  left: 400px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.contain .base_info .content {
+  width: 380px;
+  margin: 55px auto;
+  font-size: 18px;
+  font-family: FZYaSongS-B-GB;
+}
+.contain .base_info .content .school_num {
+  margin: 10px 0;
+}
+.contain .base_info .content .school_num .sn_c {
+  display: inline-block;
+}
+.contain .base_info .content .sign .sign_title {
+  float: left;
+  margin-right: 10px;
+}
+.contain .base_info .content .sign .sign_b {
+  float: left;
+}
+.contain .base_info .content .sign .hasSign {
+  display: none;
+  float: left;
+}
+.contain .base_info .content .sign .sign_out {
+  display: none;
+  margin-left: 50px;
+  float: left;
+}
